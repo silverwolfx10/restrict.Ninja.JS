@@ -28,7 +28,7 @@ this.Ninja.module('$restrict', ['$curry'], function ($curry) {
    *
    */
   function restrict(a, b) {
-    for (key in a) if (!(key in b)) delete a[key];
+    for (var key in a) if (!(key in b)) delete a[key];
     return a;
   }
 
